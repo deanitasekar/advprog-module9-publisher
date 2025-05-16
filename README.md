@@ -22,9 +22,15 @@ Dengan menggunakan URL yang sama, publisher dan subscriber membentuk komunikasi 
 ![Message broker](images/message_broker.png)
 
 ## Running RabbitMQ with one connection:
-![One connection](images/one_connection.png)
+![One connection](images/running_one_connection.png)
 
 ## Running cargo run from the console:
 ![Publisher console](images/publisher_console.png)
 ![Subsciber console](images/subscriber_console.png)
+
 Kedua gambar berikut merupakan tampilan console yang saya miliki ketika saya menjalankan `cargo run` pada subscriber dan publisher. Publisher mengirimkan 5 event kepada message broker yang kemudian diterima dan diproses oleh publisher, ditandai dengan output yang dihasilkan pada console subscriber.
+
+## Running RabbitMQ monitoring chart:
+![Monitoring chart](images/monitoring_chart.png)
+
+Spike pada grafik "message rates last minute" muncul ketika cargo run dijalankan sebanyak 2 kali pada publisher. Spike ini merepresentasikan pengiriman pesan (publish rate 1.5/s) ke RabbitMQ. Meskipun terdapat 2 antrean dan 1 konsumen, tidak ada pesan yang tertahan (queued messages = 0), menandakan pesan langsung diproses. Lonjakan pada grafik secara langsung berkorelasi dengan aktivitas publisher yang mengirim pesan ke broker. Begitu publisher dijalankan, grafik menunjukkan spike, yang membuktikan bahwa pengiriman pesan berhasil meski tidak ada pesan yang tertinggal dalam sistem

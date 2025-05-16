@@ -18,3 +18,5 @@ URL “amqp://guest:guest@localhost:5672” memiliki arti bahwa keduanya terhubu
 
 Dengan menggunakan URL yang sama, publisher dan subscriber membentuk komunikasi terintegrasi dimana keduanya terhubung ke server AMQP yang sama. Hal ini memastikan bahwa pesan yang dipublikasikan oleh publisher dapat diterima dan diproses oleh subscriber dalam satu sistem messaging. Server AMQP berperan sebagai perantara (broker) yang menjembatani komunikasi antara publisher dan subscriber.
 
+## Running RabbitMQ as message broker:
+![Message broker](images/message_broker.png)

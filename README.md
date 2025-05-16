@@ -20,3 +20,11 @@ Dengan menggunakan URL yang sama, publisher dan subscriber membentuk komunikasi 
 
 ## Running RabbitMQ as message broker:
 ![Message broker](images/message_broker.png)
+
+## Running RabbitMQ with one connection:
+![One connection](images/one_connection.png)
+
+## Running cargo run from the console:
+![Publisher console](images/publisher_console.png)
+![Subsciber console](images/subscriber_console.png)
+Kedua gambar berikut merupakan tampilan console yang saya miliki ketika saya menjalankan `cargo run` pada subscriber dan publisher. Publisher mengirimkan 5 event kepada message broker yang kemudian diterima dan diproses oleh publisher, ditandai dengan output yang dihasilkan pada console subscriber.
